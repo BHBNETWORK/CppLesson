@@ -14,6 +14,7 @@ typedef struct pXBTComplex XBTComplex;
 
 extern void XBTInit (XBTComplex * theXBTComplex);
 
+#pragma mark -
 
 class CXBTComplex{
 	public:

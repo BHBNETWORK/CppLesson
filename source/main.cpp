@@ -41,6 +41,8 @@ void mainTestComplex (){
 	aComplex2.Dump ();
 }
 
+#pragma mark -
+
 int main (){
 	mainTestComplex ();
 	return 0;

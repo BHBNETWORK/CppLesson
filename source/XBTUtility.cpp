@@ -2,17 +2,19 @@
 #include <assert.h>
 #include "XBTUtility.h"
 
-// Global Variables
+#pragma mark - Global variables
 
 int gCounter = 0;
 
-// Prototypes:
+#pragma mark - Prototypes
+
 void XBTPrivateTrace (const char  * theMessage,  const char * theFileName, const int theLine, const char * theFunction);
 int Division (const int theNumerator, const int theDenominator);
 bool DivisionIf (const int theNumerator, const int theDenominator, int * theResult);
 
 
-// Definitions:
+#pragma mark - Definitions
+
 void XBTPrivateTrace (const char  * theMessage,  const char * theFileName, const int theLine, const char * theFunction){
 	assert (NULL != theMessage);
 	assert (NULL != theFileName);
