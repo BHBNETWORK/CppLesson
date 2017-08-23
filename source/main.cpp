@@ -23,7 +23,7 @@ void mainTestTrace (){
 		sprintf (aUnion.fString,  "Hello World: compile date and time: %s, %s", __DATE__, __TIME__);
 		++gCounter;
 		
-		printf ("gCounter = %d", gCounter);
+		printf ("gCounter = %d;\n", gCounter);
 		XBTTrace ("bye bye");
 		free (aUnion.fString);
 		aUnion.fString = NULL;
@@ -46,6 +46,7 @@ void mainTestComplex (){
 #pragma mark -
 
 int main (){
+	mainTestTrace ();
 	mainTestComplex ();
 	return 0;
 }
