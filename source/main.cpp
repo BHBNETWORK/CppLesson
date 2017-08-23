@@ -3,6 +3,7 @@
 #include "XBTUtility.h"
 #include "XBTComplex.h"
 
+static
 void mainTestTrace (){
 	//  char, int, float, double.
 	// signed or unsigned
@@ -30,6 +31,7 @@ void mainTestTrace (){
 	}
 }
 
+static
 void mainTestComplex (){
 	XBTComplex aComplex;
 	XBTInit (&aComplex);
