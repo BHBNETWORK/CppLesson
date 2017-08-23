@@ -23,6 +23,7 @@ int main (){
 		++gCounter;
 		
 		printf ("gCounter = %d", gCounter);
+		XBTTrace ("bye bye");
 		free (aUnion.fString);
 		aUnion.fString = NULL;
 		
