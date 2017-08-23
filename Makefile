@@ -1,6 +1,6 @@
 CC = g++
-CFLAGS = -Wall -ansi -pedantic
-LDFLAGS = -Wall -ansi -pedantic
+CFLAGS = -Wall -ansi -pedantic -g
+LDFLAGS = -Wall -ansi -pedantic -g
 
 main: main.obj XBTUtility.obj XBTUtility.h
 	$(CC) $(LDFLAGS) -o out/main.out obj/XBTUtility.obj obj/main.obj
