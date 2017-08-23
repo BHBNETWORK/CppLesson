@@ -13,4 +13,18 @@ struct pXBTComplex{
 typedef struct pXBTComplex XBTComplex;
 
 extern void XBTInit (XBTComplex * theXBTComplex);
+
+
+class CXBTComplex{
+	public:
+	int fReal;
+	int fImag;
+
+	public:
+	CXBTComplex (const int theReal, const int theImag):
+	fReal (theReal),fImag(theImag){
+	}
+
+	void Dump ();
+};
 #endif

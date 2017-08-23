@@ -35,6 +35,10 @@ void mainTestComplex (){
 	XBTInit (&aComplex);
 	aComplex.Init (&aComplex, 1, 2);
 	aComplex.Dump (&aComplex);
+	
+	
+	CXBTComplex aComplex2 (3, 4);
+	aComplex2.Dump ();
 }
 
 int main (){

@@ -24,3 +24,9 @@ void XBTInit (XBTComplex * theXBTComplex){
 	theXBTComplex->Dump = XBTComplexDump;
 }
 
+
+void CXBTComplex::Dump (){
+	// static_cast, reinterpret_cast, dynamic_cast
+	printf ("theComplex: %p, (%d, %d);\n", static_cast <void *> (this), this->fReal, this->fImag);
+}
+
