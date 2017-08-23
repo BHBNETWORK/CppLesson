@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "XBTUtility.h"
+#include "XBTComplex.h"
 
 
-int main (){
+int mainTestTrace (){
 	//  char, int, float, double.
 	// signed or unsigned
 	// short 4 bytes or long 8 bytes
@@ -29,5 +30,15 @@ int main (){
 		
 	}
 	return 0;
+}
+
+int mainTestComplex (){
+	XBTComplex aComplex;
+	XBTComplexInit (&aComplex, 1, 2);
+	XBTComplexDump (&aComplex);
+}
+
+int main (){
+	mainTestComplex ();
 }
 
