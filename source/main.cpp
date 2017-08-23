@@ -3,8 +3,7 @@
 #include "XBTUtility.h"
 #include "XBTComplex.h"
 
-
-int mainTestTrace (){
+void mainTestTrace (){
 	//  char, int, float, double.
 	// signed or unsigned
 	// short 4 bytes or long 8 bytes
@@ -29,16 +28,17 @@ int mainTestTrace (){
 		aUnion.fString = NULL;
 		
 	}
-	return 0;
 }
 
-int mainTestComplex (){
+void mainTestComplex (){
 	XBTComplex aComplex;
-	XBTComplexInit (&aComplex, 1, 2);
-	XBTComplexDump (&aComplex);
+	XBTInit (&aComplex);
+	aComplex.Init (&aComplex, 1, 2);
+	aComplex.Dump (&aComplex);
 }
 
 int main (){
 	mainTestComplex ();
+	return 0;
 }
 

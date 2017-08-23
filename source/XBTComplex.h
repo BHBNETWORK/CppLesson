@@ -1,12 +1,16 @@
 #ifndef XBTComplex_h
 #define XBTComplex_h
 
-typedef struct {
+struct pXBTComplex;
+struct pXBTComplex{
 	int fReal;
 	int fImag;
-} XBTComplex;
 
-extern void XBTComplexInit (XBTComplex * theComplex, const int theReal, const int theImag);
-extern void XBTComplexDump (const XBTComplex * theComplex);
+	void (*Init) (struct pXBTComplex * theComplex, const int theReal, const int theImag);
+	void (*Dump) (const struct pXBTComplex * theComplex);
+};
 
+typedef struct pXBTComplex XBTComplex;
+
+extern void XBTInit (XBTComplex * theXBTComplex);
 #endif
