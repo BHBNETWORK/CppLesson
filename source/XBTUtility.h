@@ -11,4 +11,7 @@ extern void XBTPrivateTrace (const char  * theMessage,  const char * theFileName
 extern int Division (const int theNumerator, const int theDenominator);
 extern bool DivisionIf (const int theNumerator, const int theDenominator, int * theResult);
 
+
+extern int gCounter;
+
 #endif

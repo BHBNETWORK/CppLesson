@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <assert.h>
+#include "XBTUtility.h"
+
+// Global Variables
+
+int gCounter = 0;
 
 // Prototypes:
 void XBTPrivateTrace (const char  * theMessage,  const char * theFileName, const int theLine, const char * theFunction);

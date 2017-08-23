@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -ansi -pedantic
 LDFLAGS = -Wall -ansi -pedantic
 
-main: main.obj XBTUtility.obj
+main: main.obj XBTUtility.obj XBTUtility.h
 	$(CC) $(LDFLAGS) -o out/main.out obj/XBTUtility.obj obj/main.obj
 
 main.obj: main.cpp
@@ -14,6 +14,8 @@ XBTUtility.obj: XBTUtility.cpp
 	$(CC) $(CFLAGS) -c -o obj/XBTUtility.obj source/XBTUtility.cpp
 
 XBTUtility.cpp:
+
+XBTUtility.h:
 
 .PHONY: clean
 clean:
