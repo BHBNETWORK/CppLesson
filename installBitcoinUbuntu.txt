@@ -1,0 +1,56 @@
+"Nodes        
+- node setup 
+- mainnet, testnets, regtest
+Network strucutre & protocol evolution        
+ - Various types of nodes
+ - Bitcoin Core development procedures
+Exercises"
+
+---
+VM Settings->System->Processor 4 CPU
+---
+git clone https://github.com/bitcoin/bitcoin.git
+git tag
+git checkout v0.14.2
+sudo apt-get install autoconf build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+./autogen.sh
+
+./configure --without-gui
+
+Options used to compile and link:
+  with wallet   = yes
+  with gui / qt = no
+  with zmq      = no
+  with test     = yes
+  with bench    = yes
+  with upnp     = auto
+  debug enabled = no
+  werror        = no
+
+  target os     = linux
+  build os      = 
+
+  CC            = gcc
+  CFLAGS        = -g -O2
+  CPPFLAGS      =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS
+  CXX           = g++ -std=c++11
+  CXXFLAGS      = -g -O2 -Wall -Wextra -Wformat -Wvla -Wformat-security -Wno-unused-parameter
+  LDFLAGS       =
+
+---
+
+cd /home/xbt/development
+mkdir util_bitcoin
+cd util_bitcoin
+ln -s -i /home/xbt/development/bitcoin/src/bitcoind bitcoind
+ln -s -i /home/xbt/development/bitcoin/src/bitcoin-cli bitcoin-cli
+ln -s -i /home/xbt/development/bitcoin/src/bitcoin-tx bitcoin-tx
+
+./bitcoind -h
