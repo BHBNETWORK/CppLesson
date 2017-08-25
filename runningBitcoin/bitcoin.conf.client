@@ -1,0 +1,25 @@
+# testnet-box functionality
+# 52.232.122.35
+
+regtest=1
+dnsseed=0
+upnp=0
+
+# listen on different ports than default testnet
+port=19020
+rpcport=19021
+
+# always run a server, even with bitcoin-qt
+server=1
+listen=0
+
+whitelist=127.0.0.1
+rpcallowip=0.0.0.0/0
+connect=52.166.5.175:19020
+# connect=52.166.5.175:19011
+# connect=52.178.96.68:19020
+
+rpcuser=bitcoinrpc
+rpcpassword=satoshi
+txindex=1
+
